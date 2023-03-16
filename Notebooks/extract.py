@@ -25,7 +25,6 @@ def mask_variable_names(code, mask_prob=0.5):
 	"""
 	masked_code = code
 	# Regular expression pattern to match variable assignments
-	#pattern = r"\b(\w(\s*[,=]\s.*)?\s=\s[^#\n]*)"
 	pattern = r"\b([a-zA-Z_]\w*(?:\s*[,=]\s*[a-zA-Z_]\w*)*?\s=\s[^#\n]*)"
 	for match in re.findall(pattern, code):
 		# Check if the value should be masked
