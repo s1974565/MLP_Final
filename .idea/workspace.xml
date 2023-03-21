@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c03f228-f75a-49b4-b101-7d5d0f1be097" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Notebooks/finetuning_cs.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/baseline_testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/baseline_testing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/finetuning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/finetuning_ce.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/test.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/test.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/train.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/train.pickle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NFU0nKxbgRX7ZSwZWNXNze8kZX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Jinyoung/Desktop/MLP/MLP_Final/Notebooks",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jinyoung\Desktop\MLP\MLP_Final\Notebooks" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jinyoung\Desktop\MLP\MLP_Final\Notebooks\Tutorials" />
+      <recent name="C:\Users\Jinyoung\Desktop\MLP\MLP_Final\Notebooks\Old" />
+      <recent name="C:\Users\Jinyoung\Desktop\MLP\MLP_Final\Notebooks" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c03f228-f75a-49b4-b101-7d5d0f1be097" name="Changes" comment="" />
+      <created>1679259104736</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679259104736</updated>
+      <workItem from="1679259106905" duration="6297000" />
+      <workItem from="1679265559707" duration="661000" />
+      <workItem from="1679266726852" duration="19681000" />
+      <workItem from="1679337102224" duration="3398000" />
+      <workItem from="1679340731415" duration="50499000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

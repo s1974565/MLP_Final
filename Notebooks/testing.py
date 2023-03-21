@@ -166,7 +166,7 @@ def mask_variable_df(df, code_column_name="code", mask_prob=0.5, return_df=True,
 
 def cosine_similarity(sentences, model=model_se):
     embeddings = model.encode(sentences)
-    return np.dot(embeddings[0], embeddings[1]) / (np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1]))
+    return np.dot(embeddings[0], embeddings[1])
 
 
 def remove_docstring(code):
