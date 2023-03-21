@@ -10,7 +10,7 @@ import os
 import glob
 import re
 import torch
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 # Pytorch dataset
 from torch.utils.data import Dataset
@@ -99,7 +99,7 @@ def output_print(input_sequence, unmasker, true_labels=None, top_k=2, mask_token
 
 
 # Basic assumption: The same line of code never occurs twice.
-def mask_variable_names(code, mask_prob):
+def mask_variable_names(code, mask_prob, current_mask_prob):
     """
     Mask the values of variables in a code with a certain probability.
     """
@@ -129,7 +129,7 @@ def mask_variable_names(code, mask_prob):
                     # If beginning of the function call, then process no further.
                     if "(" in var:
                         break
-                    if np.random.uniform() < mask_prob:
+                    if current_mask_prob < mask_prob:
                         var_begin_index = masked_match.find(var.strip())
                         var_index = (
                             var_begin_index + match_begin_index, var_begin_index + match_begin_index + len(var.strip()))
@@ -145,12 +145,16 @@ def mask_variable_names(code, mask_prob):
         return code, list()
 
 
-def mask_variable_df(df, code_column_name="code", mask_prob=0.5, return_df=True):
+# It generates a random number list to be used for mask. So the masking result would be the same for the same shuffle_seed
+def mask_variable_df(df, code_column_name="code", mask_prob=0.5, return_df=True, rng_seed=42):
     variable_indices_list = list()
     variable_labels_list = list()
+    rng = np.random.default_rng(rng_seed)
+    mask_probs = rng.random(len(df))
 
     for index, row in tqdm(df.iterrows(), desc="Masking", total=len(df)):
-        variable_indices, variable_labels = mask_variable_names(row[code_column_name], mask_prob)
+        current_mask_prob = mask_probs[index]
+        variable_indices, variable_labels = mask_variable_names(row[code_column_name], mask_prob, current_mask_prob)
         variable_indices_list.append(variable_indices)
         variable_labels_list.append(variable_labels)
 
@@ -211,7 +215,7 @@ def mask_prediction(merged_df, top_k, unmasker, top_k_connection, mask_token, wi
     return window_df
 
 
-def baseline_test(merged_code_df, unmasker, mask_token="<mask>", top_k=1, top_k_connection="_", window_size=100, batch_size=100):
+def model_test(merged_code_df, unmasker, mask_token="<mask>", top_k=1, top_k_connection="_", window_size=100, batch_size=100):
     """
     For the given code dataframe, it automatically masks the codes and fill the masks by the supplied unmasker.
     The predicted results are then compared with the true labels, with cosine similarity.
@@ -230,6 +234,7 @@ def baseline_test(merged_code_df, unmasker, mask_token="<mask>", top_k=1, top_k_
     # 1. The given input size is bigger than the maximum model input. Reduce the window_size.
     # 2. There is not enough GPU memory. Reduce the batch_size.
     result_df = mask_prediction(merged_code_df, top_k, unmasker, top_k_connection, mask_token, window_size, batch_size)
+    torch.cuda.empty_cache()
     similarity_score_list = list()
     for row_index, row in tqdm(result_df.iterrows(), desc="Similarity", total=len(result_df)):
         current_label = row["label"]
@@ -239,4 +244,5 @@ def baseline_test(merged_code_df, unmasker, mask_token="<mask>", top_k=1, top_k_
         similarity_score_list.append(similarity_score)
 
     result_df["similarity"] = similarity_score_list
+    torch.cuda.empty_cache()
     return result_df
