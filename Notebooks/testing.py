@@ -104,7 +104,8 @@ def mask_variable_names(code, mask_prob, current_mask_prob):
     Mask the values of variables in a code with a certain probability.
     """
     # Regular expression pattern to match variable assignments
-    # Function signature (to be filtered out later) | common variable definitions
+    # Function signature | Pyton comments | return sentences | common variable definitions
+    # Only the common variable definitions will be used later (others are filtered out)
     pattern = r"(\bdef\s\w*\(.*?\)):|(#\s*.*?\n)|(return\s*.*?\n)|(\b[\w,\s]*=\s*.*?\n)"
     matches = [str().join(x) for x in re.findall(pattern, code, flags=re.DOTALL)]
     var_indices = list()

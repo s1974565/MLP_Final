@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8c03f228-f75a-49b4-b101-7d5d0f1be097" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/baseline_results/b1_result_k1.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/baseline_results/b1_result_k1.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/baseline_results/b1_result_k2.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/baseline_results/b1_result_k2.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/baseline_results/b1_result_k3.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/baseline_results/b1_result_k3.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/baseline_testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/baseline_testing.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/finetuning_ce.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/finetuning_ce.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/finetuning_cs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/finetuning_cs.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/test.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/test.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/train.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/train.pickle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +82,8 @@
       <workItem from="1679337102224" duration="3398000" />
       <workItem from="1679340731415" duration="50874000" />
       <workItem from="1679429878278" duration="201000" />
-      <workItem from="1679431280460" duration="2693000" />
+      <workItem from="1679431280460" duration="2929000" />
+      <workItem from="1679562275670" duration="3300000" />
     </task>
     <servers />
   </component>
