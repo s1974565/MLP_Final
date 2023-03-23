@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/finetuning_ce.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/finetuning_ce.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/finetuning_cs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/finetuning_cs.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/train.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/train.pickle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +82,8 @@
       <workItem from="1679340731415" duration="50874000" />
       <workItem from="1679429878278" duration="201000" />
       <workItem from="1679431280460" duration="2929000" />
-      <workItem from="1679562275670" duration="3300000" />
+      <workItem from="1679562275670" duration="8784000" />
+      <workItem from="1679583645889" duration="2694000" />
     </task>
     <servers />
   </component>
