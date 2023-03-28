@@ -2,15 +2,17 @@
 
 [Find the model(s) here.](https://huggingface.co/gnathoi)
 
-To access the model from huggingface using a jupyter notebook use the following (you currently require an access token from gnathoi):
+To access the model from huggingface using a jupyter notebook use the following:
+
+
 
 ```python
 from transformers import RobertaTokenizer, RobertaForMaskedLM, pipeline
-from huggingface_hub import notebook_login
-notebook_login()
 
-model = RobertaForMaskedLM.from_pretrained('gnathoi/RoBERTvar', use_auth_token=True)
-tokenizer = RobertaTokenizer.from_pretrained('gnathoi/RoBERTvar', use_auth_token=True)
+auth_token = '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' # this token is read only
+
+model = RobertaForMaskedLM.from_pretrained('gnathoi/RoBERTvar', use_auth_token=auth_token)
+tokenizer = RobertaTokenizer.from_pretrained('gnathoi/RoBERTvar', use_auth_token=auth_token)
 var_gen = pipeline('fill-mask', model=model, tokenizer=tokenizer) 
 ```
 
